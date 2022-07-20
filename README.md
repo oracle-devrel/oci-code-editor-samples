@@ -1,23 +1,20 @@
-# oci-code-editor-samples
+# OCI Code Editor Samples
 
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_oci-code-editor-samples)](https://sonarcloud.io/dashboard?id=oracle-devrel_oci-code-editor-samples)
 
-## THIS IS A NEW, BLANK REPO THAT IS NOT READY FOR USE YET.  PLEASE CHECK BACK SOON!
-
 ## Introduction
-MISSING
+The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks.
 
 ## Getting Started
-MISSING
+* [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to OCI console and click  <img src="./images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
+* Wait for Code Editor to load
 
-### Prerequisites
-MISSING
+## List of Samples
+* [OpenAPI Preview with OCI Code Editor](./open-api-view)
 
-## Notes/Issues
-MISSING
-
-## URLs
-* Nothing at this time
+## References
+* Blog post link
+* Documentation Link
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.

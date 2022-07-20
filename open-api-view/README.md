@@ -8,7 +8,7 @@ OpenAPI specification file (earlier called as Swagger spec) is now viewable with
 
 ## Getting Started
 ### Step 1
-* Login to OCI console and click  <img src="../images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
+* [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to OCI console and click  <img src="../images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
 * Wait for Code Editor to load
 
 ### Step 2
