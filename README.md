@@ -6,10 +6,11 @@
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks.
 
 ## Getting Started
-* [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to OCI console and click  <img src="./images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
+* [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to [OCI Console](https://cloud.oracle.com/) and click  <img src="./images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
 * Wait for Code Editor to load
 
 ## List of Samples
+* [Resource Manager Stack editing with OCI Code Editor](./resource-manager-stacks/)
 * [Data Science Job Artifact editing with OCI Code Editor](./data-science-jobs/)
 * [OpenAPI Preview with OCI Code Editor](./open-api-view)
 
