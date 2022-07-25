@@ -8,7 +8,7 @@ Resource Manager is an Oracle Cloud Infrastructure service that allows you to au
 
 ## Getting Started
 ### Step 1 - Create New Resource Manager Stack
-#### Option 1
+#### Option 1 (via Hello World Stack)
 1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-devrel/oci-code-editor-samples/raw/samples/resource-manager-stacks/oci-rms-hello-world.zip) to deploy sample Hello World Resource Manager Stack.
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
@@ -22,7 +22,7 @@ Resource Manager is an Oracle Cloud Infrastructure service that allows you to au
 6. If no further changes are necessary, return to the Stack Details page, click **Terraform Actions**, and select **Apply**.
 
 
-#### Option 2
+#### Option 2 (with Manual RM stack)
 * Login to [OCI Console](https://cloud.oracle.com/)
 * Go to `Developer Services > Resource Manager > Stacks`
 ![](./images/oci-rms-menu.png)
