@@ -122,11 +122,11 @@ Note: Alternatively, you can also open cloud shell to execute these commands.
 
 1. Clone this GIT repository.
 ```
-$ git init java-gvme-hello-world
-$ cd java-gvme-hello-world
+$ git init java-graalvm-hello-world
+$ cd java-graalvm-hello-world
 $ git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
 $ git config core. sparsecheckout true
-$ echo "java-samples/java-gvme-hello-world/*">>.git/info/sparse-checkout
+$ echo "java-samples/java-graalvm-hello-world/*">>.git/info/sparse-checkout
 $ git pull --depth=1 origin main
 ```
 
@@ -275,6 +275,7 @@ You can now view/change the sample code in code editor.
     ```
     Hello World!
     ```
+
 ## References
 * [Java Graal VM Overview](https://www.oracle.com/in/java/graalvm/)
 * [Oracle Graal VM Documentation](https://docs.oracle.com/en/graalvm/enterprise/20/docs/)
