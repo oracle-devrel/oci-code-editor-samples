@@ -10,6 +10,7 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 * Wait for Code Editor to load
 
 ## List of Samples
+* [Function Samples with OCI Code Editor](./functions/)
 * [Resource Manager Stack editing with OCI Code Editor](./resource-manager-stacks/)
 * [Data Science Job Artifact editing with OCI Code Editor](./data-science-jobs/)
 * [OpenAPI Preview with OCI Code Editor](./open-api-view)

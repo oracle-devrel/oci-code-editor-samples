@@ -1,4 +1,4 @@
-# OCI Functions with OCI Code Editor
+# Creating New OCI Functions with OCI Code Editor
 
 ## Introduction
 
@@ -6,11 +6,40 @@ You can now create/edit OCI Functions on the go with OCI Code Editor with out an
 
 Oracle Cloud Infrastructure (OCI) Functions is a serverless platform that lets developers create, run, and scale applications without managing any infrastructure. Functions integrate with Oracle Cloud Infrastructure, platform services and SaaS applications. Because Functions is based on the open source Fn Project, developers can create applications that can be easily ported to other cloud and on-premises environments. Code based on Functions typically runs for short durations, and customers pay only for the resources they use.
 
-## Function Samples
-* [Creating New OCI Function with Code Editor](./README_CREATE_FUNCTION.md)
+## Prerequisites
+* [Create new application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscreatingapps.htm) if you do not have one already.
+
+## Getting Started
+* [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to [OCI Console](https://cloud.oracle.com/) and click  <img src="../images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
+* Wait for Code Editor to load and navigate to the Application on the left panel.
+
+### Step 1 - Create New Function
+* Right click on the app created and click on `Create function...`
+![](./images/oci-ce-create-function-menu.png)
+* Choose `Create from a code repository` from top option drop down.
+![](./images/oci-ce-new-function-options.png)
+
+* Enter function name as `python-hello-world`
+
+* Enter Git URL as `https://github.com/ashok-cm/oci-function-python-hello-world`. 
+***Note:*** Fork and use the repository if you would like to try editing functions from within Code Editor.
+* Click on `Add to Workspace`. 
+![](./images/oci-ce-confirm-dialog.png)
+Now you may see the code in Code Editor.
+![](./images/oci-ce-function-code.png)
+
+### Step 2 - Deploy Function from Code Editor
+* Click on `Deploy Function` on the function context menu.
+![](./images/oci-cs-deploy-function-menu.png)
+* Fill in deploy form as below
+![](./images/oci-ce-deploy-function-form.png)
+Fill `Registry Location` as your preferred OCI image registry name. (eg. `python-hello-world`)
+Fill `Auth token` with OCI generated auth token.
 
 ## References
 * [OCI Functions Overview](https://www.oracle.com/in/cloud/cloud-native/functions/)
+* [Generating new Auth Token](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrygettingauthtoken.htm)
+
 
 ## Contributors
 * Author: Ashok Raja CM
