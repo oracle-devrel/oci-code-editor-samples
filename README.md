@@ -10,13 +10,16 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 * Wait for Code Editor to load
 
 ## List of Samples
+* [Function Samples with OCI Code Editor](./functions/)
 * [Resource Manager Stack editing with OCI Code Editor](./resource-manager-stacks/)
 * [Data Science Job Artifact editing with OCI Code Editor](./data-science-jobs/)
 * [OpenAPI Preview with OCI Code Editor](./open-api-view)
+* [Java - GraalVM Hello World with OCI Code Editor](./java-samples/java-graalvm-hello-world/)
+* [Java - GraalVM Micronaut Hello Rest with OCI Code Editor](./java-samples/java-graalvm-micronaut-hello-rest/)
 
 ## References
-* Blog post link
-* Documentation Link
+* [Blog Post - link to be updated]
+* [Documentation - link to be updated]
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
