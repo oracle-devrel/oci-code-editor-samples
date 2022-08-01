@@ -1,6 +1,6 @@
 # Java Hello World with GraalVM Enterprise in OCI Code Editor
 
-This sample shows how you can get started quickly with GraalVM Enterprise Edition in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world Java application built with GraalVM Enterprise Native Image and JDK.
+This sample shows how you can get started quickly with GraalVM Enterprise Edition in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world Java application built with GraalVM Enterprise Native Image and JDK (Java Development Kit).
 
 ## What is GraalVM?
 
@@ -14,17 +14,17 @@ GraalVM Enterprise Edition is available for use on Oracle Cloud Infrastructure (
 
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks. 
 
-## Step 1 (Open Terminal in Code Editor)
+Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
+
+## Step 1: Open Terminal in Code Editor
 
 1. [Login to OCI Console and launch Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true).
 
-2. Open the terminal from code editor.
+2. Open a `New Terminal` in Code Editor. Use this Terminal window to run the commands shown in this sample.
 ![](./images/oci-ce-terminal.png)
-Execute upcoming commands in the terminal prompt.
 
-Note: Alternatively, you can also open cloud shell to execute these commands.
 
-## Step 2 (Prerequisites - One time setup)
+## Step 2: [OPTIONAL] Confirm Software Version and Environment Variables
 
 1. List the installed JDKs:
 
@@ -118,21 +118,21 @@ Note: Alternatively, you can also open cloud shell to execute these commands.
     OS name: "linux", version: "4.14.35-2047.513.2.2.el7uek.x86_64", arch: "amd64", family: "unix"
     ```
 
-## Step 3 (Setup Project and Run)
+## Step 3: Setup Project and Run
 
 1. Clone this GIT repository.
-```
-$ git init java-graalvm-hello-world
-$ cd java-graalvm-hello-world
-$ git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-$ git config core. sparsecheckout true
-$ echo "java-samples/java-graalvm-hello-world/*">>.git/info/sparse-checkout
-$ git pull --depth=1 origin main
-```
+    ```shell
+    git init java-graalvm-hello-world
+    cd java-graalvm-hello-world
+    git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
+    git config core. sparsecheckout true
+    echo "java-samples/java-graalvm-hello-world/*">>.git/info/sparse-checkout
+    git pull --depth=1 origin main
+    ```
 
-You can now view/change the sample code in code editor.
+    You can now view/change the sample code in code editor.
 
-![](./images/oci-ce-java-code.png)
+    ![](./images/oci-ce-java-code.png)
 
 2. Build a JAR for the sample app.
 
@@ -151,7 +151,17 @@ You can now view/change the sample code in code editor.
     Hello World!
     ```
 
-4. Run the GraalVM Native Image build to produce a native executable.
+4. Let's use GraalVM Native Image to produce a native executable.
+
+    4.1) **Option 1: Quick Build enabled**
+
+    To enable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and uncomment the line shown:
+
+    ```
+    <buildArg>-Ob</buildArg>
+    ```
+
+    Run the Native Image build to generate a native executable:
 
     ```shell
     export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false
@@ -159,109 +169,125 @@ You can now view/change the sample code in code editor.
     mvn clean -Pnative -DskipTests package
     ```
 
-    4.1) **Option 1:** With **Quick Build enabled** in the pom.xml, the output should be similar to:
+    With **Quick Build enabled** in the pom.xml, the output should be similar to:
 
     ```
     ...
     You enabled -Ob for this image build. This will configure some optimizations to reduce image build time.
-    This feature should only be used during development and never for deployment.
-    ================================================================================================
+    ...
+    ========================================================================================================================
     GraalVM Native Image: Generating 'my-app' (executable)...
-    ================================================================================================
-    [1/7] Initializing...                                                           (10.4s @ 0.21GB)
+    ========================================================================================================================
+    [1/7] Initializing...                                                                                   (11.8s @ 0.20GB)
     Version info: 'GraalVM 22.2.0 Java 17 EE'
     Java version info: '17.0.4+11-LTS-jvmci-22.2-b05'
     C compiler: gcc (redhat, x86_64, 11.2.1)
     Garbage collector: Serial GC
-    [2/7] Performing analysis...  [*****]                                           (18.3s @ 0.72GB)
-    1,826 (62.38%) of  2,927 classes reachable
+    [2/7] Performing analysis...  [*****]                                                                   (21.3s @ 0.70GB)
+    1,826 (62.43%) of  2,925 classes reachable
     1,665 (46.89%) of  3,551 fields reachable
-    7,652 (37.12%) of 20,613 methods reachable
+    7,652 (37.13%) of 20,607 methods reachable
         21 classes,     0 fields, and   258 methods registered for reflection
         49 classes,    32 fields, and    48 methods registered for JNI access
         4 native libraries: dl, pthread, rt, z
-    [3/7] Building universe...                                                       (3.2s @ 0.97GB)
-    [4/7] Parsing methods...      [**]                                               (2.8s @ 0.40GB)
-    [5/7] Inlining methods...     [***]                                              (1.7s @ 0.66GB)
-    [6/7] Compiling methods...    [***]                                             (10.0s @ 0.82GB)
-    [7/7] Creating image...                                                          (2.3s @ 1.01GB)
+    [3/7] Building universe...                                                                               (3.0s @ 0.95GB)
+    [4/7] Parsing methods...      [**]                                                                       (2.9s @ 0.40GB)
+    [5/7] Inlining methods...     [***]                                                                      (2.0s @ 0.65GB)
+    [6/7] Compiling methods...    [***]                                                                     (10.8s @ 0.80GB)
+    [7/7] Creating image...                                                                                  (2.2s @ 0.98GB)
     1.78MB (42.88%) for code area:     4,439 compilation units
-    2.23MB (53.52%) for image heap:   36,753 objects and 1 resources
-    153.49KB ( 3.60%) for other data
+    2.23MB (53.52%) for image heap:   36,755 objects and 1 resources
+    153.46KB ( 3.60%) for other data
     4.16MB in total
-    ------------------------------------------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------------------------
     Top 10 packages in code area:                               Top 10 object types in image heap:
-    208.78KB com.oracle.svm.jni                                 374.04KB byte[] for code metadata
-    184.72KB java.lang                                          317.32KB byte[] for java.lang.String
+    208.78KB com.oracle.svm.jni                                 374.00KB byte[] for code metadata
+    184.71KB java.lang                                          317.32KB byte[] for java.lang.String
     169.35KB com.oracle.svm.core.code                           268.43KB java.lang.Class
-    144.00KB java.util                                          263.72KB java.lang.String
-    104.52KB com.oracle.svm.core.genscavenge                    213.43KB byte[] for general heap data
+    143.98KB java.util                                          263.72KB java.lang.String
+    104.54KB com.oracle.svm.core.genscavenge                    213.43KB byte[] for general heap data
     80.73KB java.util.concurrent                               111.71KB char[]
-    64.87KB java.lang.invoke                      71.33KB com.oracle.svm.core.hub.DynamicHubCompanion
-    52.95KB java.math                                          68.66KB byte[] for reflection metadata
-    44.58KB com.oracle.svm.jni.functions       50.56KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+    64.87KB java.lang.invoke                                    71.33KB com.oracle.svm.core.hub.DynamicHubCompanion
+    52.95KB java.math                                           68.66KB byte[] for reflection metadata
+    44.58KB com.oracle.svm.jni.functions                        50.56KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
     40.69KB java.io                                             45.11KB java.util.HashMap$Node[]
-    700.71KB for 99 more packages                               347.71KB for 478 more object types
-    ------------------------------------------------------------------------------------------------
-                1.1s (2.2% of total time) in 14 GCs | Peak RSS: 1.61GB | CPU load: 1.60
-    ------------------------------------------------------------------------------------------------
+    700.71KB for 99 more packages                               347.76KB for 478 more object types
+    ------------------------------------------------------------------------------------------------------------------------
+                            1.4s (2.4% of total time) in 14 GCs | Peak RSS: 1.62GB | CPU load: 1.74
+    ------------------------------------------------------------------------------------------------------------------------
     Produced artifacts:
-    /home/user_graal/gvme-java-hello-world/target/my-app (executable)
-    /home/user_graal/gvme-java-hello-world/target/my-app.build_artifacts.txt (txt)
-    ================================================================================================
-    Finished generating 'my-app' in 50.8s.
+    /home/user_graal/graalvmee-java-hello-world/target/my-app (executable)
+    /home/user_graal/graalvmee-java-hello-world/target/my-app.build_artifacts.txt (txt)
+    ========================================================================================================================
+    Finished generating 'my-app' in 56.0s.
     ...
     ```
 
-    4.2) **Option 2:** With **Quick Build disabled** in the pom.xml, the output should be similar to:
+    4.2) **Option 2: Quick Build disabled** 
+    
+    To disable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and comment the line shown:  
+
+    ```
+    <!-- <buildArg>-Ob</buildArg> -->
+    ```
+
+    Run the Native Image build to generate a native executable:
+
+    ```shell
+    export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false
+
+    mvn clean -Pnative -DskipTests package
+    ```
+
+    With **Quick Build disabled** in the pom.xml, the output should be similar to:
 
     ```
     ...
-    ================================================================================================
+    ========================================================================================================================
     GraalVM Native Image: Generating 'my-app' (executable)...
-    ================================================================================================
-    [1/7] Initializing...                                                           (16.7s @ 0.23GB)
+    ========================================================================================================================
+    [1/7] Initializing...                                                                                   (10.9s @ 0.22GB)
     Version info: 'GraalVM 22.2.0 Java 17 EE'
     Java version info: '17.0.4+11-LTS-jvmci-22.2-b05'
     C compiler: gcc (redhat, x86_64, 11.2.1)
     Garbage collector: Serial GC
-    [2/7] Performing analysis...  [*****]                                           (30.8s @ 0.76GB)
+    [2/7] Performing analysis...  [*****]                                                                   (19.0s @ 0.75GB)
     1,865 (61.63%) of  3,026 classes reachable
     1,701 (47.24%) of  3,601 fields reachable
-    7,647 (36.18%) of 21,135 methods reachable
+    7,647 (36.19%) of 21,131 methods reachable
         21 classes,     0 fields, and   258 methods registered for reflection
         49 classes,    32 fields, and    48 methods registered for JNI access
         4 native libraries: dl, pthread, rt, z
-    [3/7] Building universe...                                                       (5.2s @ 1.03GB)
-    [4/7] Parsing methods...      [**]                                               (4.6s @ 0.47GB)
-    [5/7] Inlining methods...     [***]                                              (2.8s @ 0.73GB)
-    [6/7] Compiling methods...    [********]                                        (72.4s @ 2.42GB)
-    [7/7] Creating image...                                                          (3.4s @ 0.28GB)
+    [3/7] Building universe...                                                                               (2.7s @ 1.01GB)
+    [4/7] Parsing methods...      [**]                                                                       (2.7s @ 0.47GB)
+    [5/7] Inlining methods...     [***]                                                                      (1.7s @ 0.72GB)
+    [6/7] Compiling methods...    [******]                                                                  (42.4s @ 2.24GB)
+    [7/7] Creating image...                                                                                  (2.2s @ 2.47GB)
     2.50MB (49.19%) for code area:     3,718 compilation units
-    2.43MB (47.85%) for image heap:   37,067 objects and 1 resources
-    154.51KB ( 2.97%) for other data
+    2.43MB (47.85%) for image heap:   37,070 objects and 1 resources
+    154.52KB ( 2.97%) for other data
     5.09MB in total
-    ------------------------------------------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------------------------
     Top 10 packages in code area:                               Top 10 object types in image heap:
-    299.90KB java.lang                                          508.60KB byte[] for code metadata
+    299.96KB java.lang                                          508.60KB byte[] for code metadata
     193.82KB com.oracle.svm.jni                                 319.97KB byte[] for java.lang.String
-    190.79KB java.util                                          288.09KB java.lang.Class
+    190.72KB java.util                                          288.09KB java.lang.Class
     157.50KB com.oracle.svm.core.code                           265.69KB java.lang.String
     118.87KB com.oracle.svm.core.genscavenge                    215.05KB byte[] for general heap data
     111.79KB java.util.concurrent                               111.71KB char[]
-    75.69KB java.lang.invoke                      72.85KB com.oracle.svm.core.hub.DynamicHubCompanion
-    73.33KB java.math                                          69.74KB byte[] for reflection metadata
-    71.31KB jdk.proxy4                         51.44KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+    75.69KB java.lang.invoke                                    72.85KB com.oracle.svm.core.hub.DynamicHubCompanion
+    73.33KB java.math                                           69.74KB byte[] for reflection metadata
+    71.31KB jdk.proxy4                                          51.44KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
     68.17KB com.oracle.svm.core                                 45.11KB java.util.HashMap$Node[]
-    1.15MB for 96 more packages                               348.00KB for 474 more object types
-    ------------------------------------------------------------------------------------------------
-                2.2s (1.5% of total time) in 18 GCs | Peak RSS: 2.97GB | CPU load: 0.99
-    ------------------------------------------------------------------------------------------------
+    1.15MB for 96 more packages                               348.07KB for 474 more object types
+    ------------------------------------------------------------------------------------------------------------------------
+                            1.4s (1.7% of total time) in 17 GCs | Peak RSS: 2.96GB | CPU load: 1.78
+    ------------------------------------------------------------------------------------------------------------------------
     Produced artifacts:
-    /home/user_graal/gvme-java-hello-world/target/my-app (executable)
-    /home/user_graal/gvme-java-hello-world/target/my-app.build_artifacts.txt (txt)
-    ================================================================================================
-    Finished generating 'my-app' in 2m 19s.
+    /home/user_graal/graalvmee-java-hello-world/target/my-app (executable)
+    /home/user_graal/graalvmee-java-hello-world/target/my-app.build_artifacts.txt (txt)
+    ========================================================================================================================
+    Finished generating 'my-app' in 1m 23s.
     ...
     ```
 
@@ -277,14 +303,13 @@ You can now view/change the sample code in code editor.
     ```
 
 ## References
-* [Java Graal VM Overview](https://www.oracle.com/in/java/graalvm/)
-* [Oracle Graal VM Documentation](https://docs.oracle.com/en/graalvm/enterprise/20/docs/)
-* [Local MacOS Project Setup Instructions](./README_Local_macOS.md)
+* [GraalVM Enterprise Overview](https://www.oracle.com/in/java/graalvm/)
+* [Graal VM Enterprise Documentation](https://docs.oracle.com/en/graalvm/enterprise/22/index.html)
 
 ## Contributors
 * Author: Sachin Pikle
 * Collaborators: Ashok Raja CM
-* Last release: July 2022
+* Last release: August 2022
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
