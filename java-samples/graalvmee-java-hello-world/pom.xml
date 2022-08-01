@@ -84,11 +84,6 @@
                 <!-- For Quick Build (22.1+) -->
 								<buildArg>-Ob</buildArg>
               </buildArgs>
-              <!-- Start: Workaround for 22.2: Disable the default Java Module Path using USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM -->
-              <!-- <environment>
-                <USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM>false</USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM>
-              </environment> -->
-              <!-- End: Workaround for 22.2: Disable the default Java Module Path using USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM -->
             </configuration>
           </plugin>
         </plugins>
