@@ -132,18 +132,19 @@ Note: Alternatively, you can also open cloud shell to execute these commands.
 
 
 1. Clone this GIT repository.
-```
-$ git init java-graalvm-micronaut-hello-rest
-$ cd java-graalvm-micronaut-hello-rest
-$ git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-$ git config core. sparsecheckout true
-$ echo "java-samples/java-graalvm-micronaut-hello-rest/*">>.git/info/sparse-checkout
-$ git pull --depth=1 origin main
-```
 
-You can now view/change the sample code in code editor.
+    ```
+    git init graalvmee-java-micronaut-hello-rest
+    cd graalvmee-java-micronaut-hello-rest
+    git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
+    git config core. sparsecheckout true
+    echo "java-samples/graalvmee-java-micronaut-hello-rest/*">>.git/info/sparse-checkout
+    git pull --depth=1 origin main
+    ```
 
-![](./images/oci-ce-gvme-micronaut-code.png)
+    You can now view/change the sample code in code editor.
+
+    ![](./images/oci-ce-gvme-micronaut-code.png)
 
 2. Build the app JAR
 
