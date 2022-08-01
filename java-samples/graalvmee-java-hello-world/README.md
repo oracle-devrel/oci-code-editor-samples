@@ -121,12 +121,13 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
 ## Step 3: Setup Project and Run
 
 1. Clone this GIT repository.
+
     ```shell
-    git init java-graalvm-hello-world
-    cd java-graalvm-hello-world
+    git init graalvmee-java-hello-world
+    cd graalvmee-java-hello-world
     git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
     git config core. sparsecheckout true
-    echo "java-samples/java-graalvm-hello-world/*">>.git/info/sparse-checkout
+    echo "java-samples/graalvmee-java-hello-world/*">>.git/info/sparse-checkout
     git pull --depth=1 origin main
     ```
 
