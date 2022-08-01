@@ -25,18 +25,6 @@ jobs:
         id: files
         with:
           pull_url: ${{ github.event.pull_request.url }}
-      - name: Look for changes to .github
-        if: contains(steps.files.outputs.all_files_changed, '.github')
-        run: |
-          echo 'Changes to files in .github are not allowed.'
-      - name: Comment if .github changed
-        if: contains(steps.files.outputs.all_files_changed, '.github')
-        uses: mshick/add-pr-comment@v1
-        with:
-          message: |
-            :no_entry: **Banned Files Modified**
-            Changes to files in `.github` are not permitted.  Please revert your changes and re-submit a new PR.  Simply changing the file back to its original state and re-committing won't work (you must revert the changes made to it).
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Look for changes to license_policy.yml
         if: contains(steps.files.outputs.all_files_changed, '"license_policy.yml"')
         run: |
@@ -61,18 +49,6 @@ jobs:
         if: contains(steps.files.outputs.all_files_changed, '"repolinter.json"')
         run: |
           echo 'Changes to repolinter.json are not allowed.'
-      - name: Look for changes to sonar-project.properties
-        if: contains(steps.files.outputs.all_files_changed, '"sonar-project.properties"')
-        uses: mshick/add-pr-comment@v1
-        with:
-          message: |
-            :no_entry: **Banned Files Modified**
-            Changes to `sonar-project.properties` are not permitted.  Please revert your changes and re-submit a new PR.  Simply changing the file back to its original state and re-committing won't work (you must revert the changes made to it).
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Comment if sonar-project.properties changed
-        if: contains(steps.files.outputs.all_files_changed, '"sonar-project.properties"')
-        run: |
-          echo 'Changes to sonar-project.properties are not allowed.'
       - name: Fail on banned file changes
         if: contains(steps.files.outputs.all_files_changed, '.github') || contains(steps.files.outputs.all_files_changed, '"license_policy.yml"') || contains(steps.files.outputs.all_files_changed, '"repolinter.json"') || contains(steps.files.outputs.all_files_changed, '"sonar-project.properties"')
         run: |
