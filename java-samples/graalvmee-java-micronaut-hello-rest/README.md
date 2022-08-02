@@ -1,6 +1,6 @@
 # Micronaut Hello World REST App with GraalVM Enterprise in OCI Code Editor
 
-This sample shows how you can get started quickly with GraalVM Enterprise Edition in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world REST application built with the Micronaut framework and GraalVM Enterprise Native Image and JDK.
+This sample shows how you can get started quickly with GraalVM Enterprise Edition in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world REST application built with the Micronaut framework and GraalVM Enterprise Native Image and JDK (Java Development Kit).
 
 ## What is GraalVM?
 
@@ -20,19 +20,17 @@ Micronaut uses GraalVM Native Image to build lightweight Java applications that 
 
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks. 
 
-GraalVM Enterprise JDK 17 (Java Development Kit) and Native Image are preinstalled in Cloud Shell. 
+Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
-## Step 1 (Open Terminal in Code Editor)
+## Step 1: Open Terminal in Code Editor
 
 1. [Login to OCI Console and launch Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true).
 
-2. Open the terminal from code editor.
-![](./images/oci-ce-terminal.png)
-Execute upcoming commands in the terminal prompt.
+2. Open a `New Terminal` in Code Editor. Use this Terminal window to run the commands shown in this sample.
 
-Note: Alternatively, you can also open cloud shell to execute these commands.
+    ![](./images/oci-ce-terminal.png)
 
-## Step 2 (Prerequisites - One time setup)
+## Step 2: [OPTIONAL] Confirm Software Version and Environment Variables
 
 1. List the installed JDKs:
 
@@ -126,24 +124,22 @@ Note: Alternatively, you can also open cloud shell to execute these commands.
     OS name: "linux", version: "4.14.35-2047.513.2.2.el7uek.x86_64", arch: "amd64", family: "unix"
     ```
 
-## Step 3 (Setup Project and Run)
-
-***Note: To run this sample on local macOS instead of Code Editor, follow the [Prerequisites on local macOS](./README_Prereqs_local_macOS.md), and skip to the next section [Steps to run a Java application](#step-3-setup-project-and-run).***
-
+## Step 3: Setup Project and Run
 
 1. Clone this GIT repository.
-```
-$ git init java-graalvm-micronaut-hello-rest
-$ cd java-graalvm-micronaut-hello-rest
-$ git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-$ git config core. sparsecheckout true
-$ echo "java-samples/java-graalvm-micronaut-hello-rest/*">>.git/info/sparse-checkout
-$ git pull --depth=1 origin main
-```
 
-You can now view/change the sample code in code editor.
+    ```
+    git init graalvmee-java-micronaut-hello-rest
+    cd graalvmee-java-micronaut-hello-rest
+    git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
+    git config core. sparsecheckout true
+    echo "java-samples/graalvmee-java-micronaut-hello-rest/*">>.git/info/sparse-checkout
+    git pull --depth=1 origin main
+    ```
 
-![](./images/oci-ce-gvme-micronaut-code.png)
+    You can now view/change the sample code in code editor.
+
+    ![](./images/oci-ce-gvme-micronaut-code.png)
 
 2. Build the app JAR
 
@@ -234,15 +230,14 @@ You can now view/change the sample code in code editor.
 11. Once the app is running in the foreground, press CTRL+C to stop it.
 
 ## References
-* [Java Graal VM Overview](https://www.oracle.com/in/java/graalvm/)
-* [Oracle Graal VM Documentation](https://docs.oracle.com/en/graalvm/enterprise/20/docs/)
+* [GraalVM Enterprise Overview](https://www.oracle.com/in/java/graalvm/)
+* [Graal VM Enterprise Documentation](https://docs.oracle.com/en/graalvm/enterprise/22/index.html)
 * [Micronaut - Microservices and Serverless Application Framework](https://micronaut.io/)
-* [Learning from Micronaut-generated Dockerfiles](./README_Micronaut-Dockerfiles.md)
 
 ## Contributors
 * Author: Sachin Pikle
 * Collaborators: Ashok Raja CM
-* Last release: July 2022
+* Last release: August 2022
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.

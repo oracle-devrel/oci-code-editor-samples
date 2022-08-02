@@ -14,8 +14,8 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 * [Resource Manager Stack editing with OCI Code Editor](./resource-manager-stacks/)
 * [Data Science Job Artifact editing with OCI Code Editor](./data-science-jobs/)
 * [OpenAPI Preview with OCI Code Editor](./open-api-view)
-* [Java - GraalVM Hello World with OCI Code Editor](./java-samples/java-graalvm-hello-world/)
-* [Java - GraalVM Micronaut Hello Rest with OCI Code Editor](./java-samples/java-graalvm-micronaut-hello-rest/)
+* [Java - GraalVM Hello World with OCI Code Editor](./java-samples/graalvmee-java-hello-world/)
+* [Java - GraalVM Micronaut Hello Rest with OCI Code Editor](./java-samples/graalvmee-java-micronaut-hello-rest/)
 
 ## References
 * [Blog Post - link to be updated]
