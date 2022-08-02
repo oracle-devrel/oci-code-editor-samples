@@ -132,7 +132,7 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     git init graalvmee-java-micronaut-hello-rest
     cd graalvmee-java-micronaut-hello-rest
     git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-    git config core. sparsecheckout true
+    git config core.sparsecheckout true
     echo "java-samples/graalvmee-java-micronaut-hello-rest/*">>.git/info/sparse-checkout
     git pull --depth=1 origin main
     ```
@@ -145,12 +145,6 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
 
     ```shell
     mvn package
-    ```
-
-    **OR** 
-
-    ```shell
-    ./mvnw package
     ```
 
 3. Run the app JAR in the background
@@ -191,14 +185,6 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false
 
     mvn package -Dpackaging=native-image
-    ```
-
-    **OR** 
-
-    ```shell
-    export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false
-    
-    ./mvnw package -Dpackaging=native-image
     ```
 
 8. Run the app native executable in the background
