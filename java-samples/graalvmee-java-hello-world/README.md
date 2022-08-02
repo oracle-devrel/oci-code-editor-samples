@@ -124,11 +124,19 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
 
     ```shell
     git init graalvmee-java-hello-world
+    
     cd graalvmee-java-hello-world
+    
     git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
+    
     git config core.sparsecheckout true
+    
     echo "java-samples/graalvmee-java-hello-world/*">>.git/info/sparse-checkout
+    
     git pull --depth=1 origin main
+    
+    cd java-samples/graalvmee-java-hello-world/
+    
     ```
 
     You can now view/change the sample code in code editor.
