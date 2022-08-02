@@ -1,6 +1,6 @@
 ## Step 2: [OPTIONAL] Confirm Software Version and Environment Variables
 
-1. List the installed JDKs:
+1. Confirm GraalVM is the current JDK:
 
     ```shell
     csruntimectl java list
@@ -9,24 +9,12 @@
     The output should be similar to:
 
     ```shell
-      graalvmeejdk-17.0.4                                    /usr/lib64/graalvm/graalvm22-ee-java17
-    * openjdk-11.0.15                   /usr/lib/jvm/java-11-openjdk-11.0.15.0.9-2.0.1.el7_9.x86_64
+    * graalvmeejdk-17.0.4                                    /usr/lib64/graalvm/graalvm22-ee-java17
+      openjdk-11.0.15                   /usr/lib/jvm/java-11-openjdk-11.0.15.0.9-2.0.1.el7_9.x86_64
       openjdk-1.8.0.332                /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.el7_9.x86_64
     ```
 
-2. Select GraalVM as the current JDK:
-
-    ```shell
-    csruntimectl java set graalvmeejdk-17.0.4
-    ```
-
-    The output should be similar to:
-
-    ```shell
-    The current managed java version is set to graalvmeejdk-17.0.4.
-    ```
-
-3. Confirm the environment variable `JAVA_HOME` is set correctly:
+2. Confirm the environment variable `JAVA_HOME` is set correctly:
 
     ```shell
     echo $JAVA_HOME
@@ -92,4 +80,4 @@
     OS name: "linux", version: "4.14.35-2047.513.2.2.el7uek.x86_64", arch: "amd64", family: "unix"
     ```
 
-Continue to **[Step 3: Setup Project and Run](./#step-3-setup-project-and-run)**
+Continue to **[Step 4: Setup Project and Run](./#step-4-setup-project-and-run)**
