@@ -1,4 +1,4 @@
-## Step 2: [OPTIONAL] Confirm Software Version and Environment Variables
+## Step 3: [OPTIONAL] Confirm Software Version and Environment Variables
 
 1. Confirm GraalVM is the current JDK:
 
