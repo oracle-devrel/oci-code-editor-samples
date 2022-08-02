@@ -92,4 +92,4 @@
     OS name: "linux", version: "4.14.35-2047.513.2.2.el7uek.x86_64", arch: "amd64", family: "unix"
     ```
 
-Continue to **[Step 3: Setup Project and Run](./README.md#step-3-setup-project-and-run)**
+Continue to **[Step 3: Setup Project and Run](./#step-3-setup-project-and-run)**
