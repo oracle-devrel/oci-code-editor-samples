@@ -16,7 +16,7 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 
 Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
-## Step 1: Open Terminal in Code Editor
+## Step 1: Open Terminal in Code Editor 
 
 1. [Login to OCI Console and launch Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true).
 
@@ -24,7 +24,7 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
 ![](./images/oci-ce-terminal.png)
 
 
-## Step 2: [OPTIONAL] Confirm Software Version and Environment Variables
+## Step 2: Select GraalVM as the current JDK 
 
 1. List the installed JDKs:
 
@@ -52,83 +52,30 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     The current managed java version is set to graalvmeejdk-17.0.4.
     ```
 
-3. Confirm the environment variable `JAVA_HOME` is set correctly:
+## Step 3: [OPTIONAL] Confirm Software Version and Environment Variables
 
-    ```shell
-    echo $JAVA_HOME
-    ```
+This step is optional - [Check software version and environment variables](./README-check-version-env-vars.md)
 
-    The output should be similar to:
 
-    ```shell
-    /usr/lib64/graalvm/graalvm22-ee-java17
-    ```
-
-4. Confirm the environment variable `PATH` is set correctly:
-
-    ```shell
-    echo $PATH
-    ```
-
-    The output should be similar to:
-
-    ```shell
-    /usr/lib64/graalvm/graalvm22-ee-java17/bin/:/ggs_client/usr/bin: ...
-    ```
-
-5. Confirm the `java` version:
-
-    ```shell
-    java -version
-    ```
-
-    The output should be similar to:
-
-    ```shell
-    java version "17.0.4" 2022-07-19 LTS   
-    Java(TM) SE Runtime Environment GraalVM EE 22.2.0 (build 17.0.4+11-LTS-jvmci-22.2-b05)   
-    Java HotSpot(TM) 64-Bit Server VM GraalVM EE 22.2.0 (build 17.0.4+11-LTS-jvmci-22.2-b05, mixed mode, sharing)
-    ```
-
-6. Confirm the `native-image` version:
-
-    ```shell
-    native-image --version
-    ```
-
-    The output should be similar to:
-
-    ```shell
-    GraalVM 22.2.0 Java 17 EE (Java Version 17.0.4+11-LTS-jvmci-22.2-b05)
-    ```
-
-7. Confirm the `maven` version and `Java` used:
-
-    ```shell
-    mvn --version
-    ```
-
-    The output should be similar to:
-
-    ```shell
-    Apache Maven 3.6.1 (Red Hat 3.6.1-6.3)
-    Maven home: /opt/rh/rh-maven36/root/usr/share/maven
-    Java version: 17.0.4, vendor: Oracle Corporation, runtime: /usr/lib64/graalvm/graalvm22-ee-java17   
-    Default locale: en_US, platform encoding: UTF-8
-    OS name: "linux", version: "4.14.35-2047.513.2.2.el7uek.x86_64", arch: "amd64", family: "unix"
-    ```
-
-## Step 3: Setup Project and Run
+## Step 4: Setup Project and Run
 
 1. Clone this GIT repository.
 
     ```shell
     git init graalvmee-java-hello-world
+    
     cd graalvmee-java-hello-world
+    
     git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-    git config core. sparsecheckout true
+    
+    git config core.sparsecheckout true
+    
     echo "java-samples/graalvmee-java-hello-world/*">>.git/info/sparse-checkout
+    
     git pull --depth=1 origin main
+    
+    cd java-samples/graalvmee-java-hello-world/
+    
     ```
 
     You can now view/change the sample code in code editor.
