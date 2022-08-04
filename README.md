@@ -18,8 +18,8 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 * [Java - GraalVM Micronaut Hello Rest with OCI Code Editor](./java-samples/graalvmee-java-micronaut-hello-rest/)
 
 ## References
-* [Blog Post - link to be updated]
-* [Documentation - link to be updated]
+* [Documentation](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/code_editor_intro.htm)
+* [Oracle Code Editor Blog](https://blogs.oracle.com/cloud-infrastructure/post/introducing-the-oci-code-editor)
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
