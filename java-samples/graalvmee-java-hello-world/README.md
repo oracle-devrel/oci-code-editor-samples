@@ -35,21 +35,21 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     The output should be similar to:
 
     ```shell
-      graalvmeejdk-17.0.4                                    /usr/lib64/graalvm/graalvm22-ee-java17
-    * openjdk-11.0.15                   /usr/lib/jvm/java-11-openjdk-11.0.15.0.9-2.0.1.el7_9.x86_64
-      openjdk-1.8.0.332                /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.el7_9.x86_64
+      graalvmeejdk-17.0.4.1                                         /usr/lib64/graalvm/graalvm22-ee-java17
+    * openjdk-11.0.16.1                        /usr/lib/jvm/java-11-openjdk-11.0.16.1.1-1.0.1.el7_9.x86_64
+      openjdk-1.8.0.345                       /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64
     ```
 
 2. Select GraalVM as the current JDK:
 
     ```shell
-    csruntimectl java set graalvmeejdk-17.0.4
+    csruntimectl java set graalvmeejdk-17.0.4.1
     ```
 
     The output should be similar to:
 
     ```shell
-    The current managed java version is set to graalvmeejdk-17.0.4.
+    The current managed java version is set to graalvmeejdk-17.0.4.1.
     ```
 
 ## Step 3: [OPTIONAL] Confirm Software Version and Environment Variables
@@ -126,48 +126,48 @@ This step is optional - [Check software version and environment variables](./REA
     ========================================================================================================================
     GraalVM Native Image: Generating 'my-app' (executable)...
     ========================================================================================================================
-    [1/7] Initializing...                                                                                   (11.8s @ 0.20GB)
-    Version info: 'GraalVM 22.2.0 Java 17 EE'
-    Java version info: '17.0.4+11-LTS-jvmci-22.2-b05'
+    [1/7] Initializing...                                                                                   (11.0s @ 0.21GB)
+    Version info: 'GraalVM 22.2.0.1 Java 17 EE'
+    Java version info: '17.0.4.1+1-LTS-jvmci-22.2-b08'
     C compiler: gcc (redhat, x86_64, 11.2.1)
     Garbage collector: Serial GC
-    [2/7] Performing analysis...  [*****]                                                                   (21.3s @ 0.70GB)
-    1,826 (62.43%) of  2,925 classes reachable
-    1,665 (46.89%) of  3,551 fields reachable
-    7,652 (37.13%) of 20,607 methods reachable
-        21 classes,     0 fields, and   258 methods registered for reflection
+    [2/7] Performing analysis...  [*****]                                                                   (19.3s @ 0.69GB)
+    1,819 (62.34%) of  2,918 classes reachable
+    1,662 (46.88%) of  3,545 fields reachable
+    7,638 (37.13%) of 20,573 methods reachable
+        17 classes,     0 fields, and   254 methods registered for reflection
         49 classes,    32 fields, and    48 methods registered for JNI access
         4 native libraries: dl, pthread, rt, z
-    [3/7] Building universe...                                                                               (3.0s @ 0.95GB)
-    [4/7] Parsing methods...      [**]                                                                       (2.9s @ 0.40GB)
-    [5/7] Inlining methods...     [***]                                                                      (2.0s @ 0.65GB)
-    [6/7] Compiling methods...    [***]                                                                     (10.8s @ 0.80GB)
-    [7/7] Creating image...                                                                                  (2.2s @ 0.98GB)
-    1.78MB (42.88%) for code area:     4,439 compilation units
-    2.23MB (53.52%) for image heap:   36,755 objects and 1 resources
-    153.46KB ( 3.60%) for other data
+    [3/7] Building universe...                                                                               (2.8s @ 0.93GB)
+    [4/7] Parsing methods...      [**]                                                                       (3.0s @ 0.35GB)
+    [5/7] Inlining methods...     [***]                                                                      (1.8s @ 0.60GB)
+    [6/7] Compiling methods...    [***]                                                                     (10.8s @ 0.75GB)
+    [7/7] Creating image...                                                                                  (2.0s @ 0.94GB)
+    1.78MB (42.86%) for code area:     4,433 compilation units
+    2.23MB (53.52%) for image heap:   36,676 objects and 1 resources
+    154.52KB ( 3.63%) for other data
     4.16MB in total
     ------------------------------------------------------------------------------------------------------------------------
     Top 10 packages in code area:                               Top 10 object types in image heap:
-    208.78KB com.oracle.svm.jni                                 374.00KB byte[] for code metadata
-    184.71KB java.lang                                          317.32KB byte[] for java.lang.String
-    169.35KB com.oracle.svm.core.code                           268.43KB java.lang.Class
-    143.98KB java.util                                          263.72KB java.lang.String
-    104.54KB com.oracle.svm.core.genscavenge                    213.43KB byte[] for general heap data
+    208.78KB com.oracle.svm.jni                                 373.74KB byte[] for code metadata
+    184.72KB java.lang                                          316.52KB byte[] for java.lang.String
+    168.31KB com.oracle.svm.core.code                           267.37KB java.lang.Class
+    144.00KB java.util                                          263.25KB java.lang.String
+    104.54KB com.oracle.svm.core.genscavenge                    213.14KB byte[] for general heap data
     80.73KB java.util.concurrent                               111.71KB char[]
-    64.87KB java.lang.invoke                                    71.33KB com.oracle.svm.core.hub.DynamicHubCompanion
-    52.95KB java.math                                           68.66KB byte[] for reflection metadata
-    44.58KB com.oracle.svm.jni.functions                        50.56KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
-    40.69KB java.io                                             45.11KB java.util.HashMap$Node[]
-    700.71KB for 99 more packages                               347.76KB for 478 more object types
+    64.87KB java.lang.invoke                                    71.05KB com.oracle.svm.core.hub.DynamicHubCompanion
+    52.95KB java.math                                           68.35KB byte[] for reflection metadata
+    44.58KB com.oracle.svm.jni.functions                        50.34KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+    40.69KB java.io                                             44.95KB java.util.HashMap$Node[]
+    700.72KB for 99 more packages                               346.11KB for 478 more object types
     ------------------------------------------------------------------------------------------------------------------------
-                            1.4s (2.4% of total time) in 14 GCs | Peak RSS: 1.62GB | CPU load: 1.74
+                            1.3s (2.4% of total time) in 14 GCs | Peak RSS: 1.62GB | CPU load: 1.74
     ------------------------------------------------------------------------------------------------------------------------
     Produced artifacts:
     /home/user_graal/graalvmee-java-hello-world/target/my-app (executable)
     /home/user_graal/graalvmee-java-hello-world/target/my-app.build_artifacts.txt (txt)
     ========================================================================================================================
-    Finished generating 'my-app' in 56.0s.
+    Finished generating 'my-app' in 52.8s.
     ...
     ```
 
@@ -194,48 +194,48 @@ This step is optional - [Check software version and environment variables](./REA
     ========================================================================================================================
     GraalVM Native Image: Generating 'my-app' (executable)...
     ========================================================================================================================
-    [1/7] Initializing...                                                                                   (10.9s @ 0.22GB)
-    Version info: 'GraalVM 22.2.0 Java 17 EE'
-    Java version info: '17.0.4+11-LTS-jvmci-22.2-b05'
+    [1/7] Initializing...                                                                                   (10.8s @ 0.21GB)
+    Version info: 'GraalVM 22.2.0.1 Java 17 EE'
+    Java version info: '17.0.4.1+1-LTS-jvmci-22.2-b08'
     C compiler: gcc (redhat, x86_64, 11.2.1)
     Garbage collector: Serial GC
-    [2/7] Performing analysis...  [*****]                                                                   (19.0s @ 0.75GB)
-    1,865 (61.63%) of  3,026 classes reachable
-    1,701 (47.24%) of  3,601 fields reachable
-    7,647 (36.19%) of 21,131 methods reachable
-        21 classes,     0 fields, and   258 methods registered for reflection
+    [2/7] Performing analysis...  [*****]                                                                   (19.3s @ 0.74GB)
+    1,858 (61.54%) of  3,019 classes reachable
+    1,698 (47.23%) of  3,595 fields reachable
+    7,633 (36.19%) of 21,094 methods reachable
+        17 classes,     0 fields, and   254 methods registered for reflection
         49 classes,    32 fields, and    48 methods registered for JNI access
         4 native libraries: dl, pthread, rt, z
-    [3/7] Building universe...                                                                               (2.7s @ 1.01GB)
-    [4/7] Parsing methods...      [**]                                                                       (2.7s @ 0.47GB)
-    [5/7] Inlining methods...     [***]                                                                      (1.7s @ 0.72GB)
-    [6/7] Compiling methods...    [******]                                                                  (42.4s @ 2.24GB)
-    [7/7] Creating image...                                                                                  (2.2s @ 2.47GB)
-    2.50MB (49.19%) for code area:     3,718 compilation units
-    2.43MB (47.85%) for image heap:   37,070 objects and 1 resources
-    154.52KB ( 2.97%) for other data
-    5.09MB in total
+    [3/7] Building universe...                                                                               (2.8s @ 1.00GB)
+    [4/7] Parsing methods...      [**]                                                                       (2.8s @ 0.44GB)
+    [5/7] Inlining methods...     [***]                                                                      (1.7s @ 0.70GB)
+    [6/7] Compiling methods...    [*******]                                                                 (45.5s @ 2.32GB)
+    [7/7] Creating image...                                                                                  (2.2s @ 2.53GB)
+    2.50MB (49.18%) for code area:     3,714 compilation units
+    2.43MB (47.88%) for image heap:   36,993 objects and 1 resources
+    152.73KB ( 2.93%) for other data
+    5.08MB in total
     ------------------------------------------------------------------------------------------------------------------------
     Top 10 packages in code area:                               Top 10 object types in image heap:
-    299.96KB java.lang                                          508.60KB byte[] for code metadata
-    193.82KB com.oracle.svm.jni                                 319.97KB byte[] for java.lang.String
-    190.72KB java.util                                          288.09KB java.lang.Class
-    157.50KB com.oracle.svm.core.code                           265.69KB java.lang.String
-    118.87KB com.oracle.svm.core.genscavenge                    215.05KB byte[] for general heap data
-    111.79KB java.util.concurrent                               111.71KB char[]
-    75.69KB java.lang.invoke                                    72.85KB com.oracle.svm.core.hub.DynamicHubCompanion
-    73.33KB java.math                                           69.74KB byte[] for reflection metadata
-    71.31KB jdk.proxy4                                          51.44KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
-    68.17KB com.oracle.svm.core                                 45.11KB java.util.HashMap$Node[]
-    1.15MB for 96 more packages                               348.07KB for 474 more object types
+    299.87KB java.lang                                          508.47KB byte[] for code metadata
+    193.82KB com.oracle.svm.jni                                 319.17KB byte[] for java.lang.String
+    190.45KB java.util                                          272.45KB java.lang.Class
+    155.80KB com.oracle.svm.core.code                           265.22KB java.lang.String
+    118.87KB com.oracle.svm.core.genscavenge                    214.75KB byte[] for general heap data
+    111.77KB java.util.concurrent                               111.71KB char[]
+    75.68KB java.lang.invoke                                    72.58KB com.oracle.svm.core.hub.DynamicHubCompanion
+    73.33KB java.math                                           69.43KB byte[] for reflection metadata
+    71.31KB jdk.proxy4                                          51.22KB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+    68.17KB com.oracle.svm.core                                 44.95KB java.util.HashMap$Node[]
+    1.15MB for 96 more packages                               349.00KB for 474 more object types
     ------------------------------------------------------------------------------------------------------------------------
-                            1.4s (1.7% of total time) in 17 GCs | Peak RSS: 2.96GB | CPU load: 1.78
+                            1.4s (1.6% of total time) in 17 GCs | Peak RSS: 2.94GB | CPU load: 1.76
     ------------------------------------------------------------------------------------------------------------------------
     Produced artifacts:
     /home/user_graal/graalvmee-java-hello-world/target/my-app (executable)
     /home/user_graal/graalvmee-java-hello-world/target/my-app.build_artifacts.txt (txt)
     ========================================================================================================================
-    Finished generating 'my-app' in 1m 23s.
+    Finished generating 'my-app' in 1m 27s.
     ...
     ```
 
@@ -257,7 +257,7 @@ This step is optional - [Check software version and environment variables](./REA
 ## Contributors
 * Author: Sachin Pikle
 * Collaborators: Ashok Raja CM
-* Last release: August 2022
+* Last updated: October 2022
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
