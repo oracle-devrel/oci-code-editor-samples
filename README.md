@@ -6,6 +6,11 @@
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks.
 
 ## Getting Started
+
+[<img src="https://raw.githubusercontent.com/hyddel/db-appdev-vm/master/ccl-ce-mac-resize.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples&cs_open_ce=true&cs_readme_path=README.md&cs_branch=main&cs_initscript_path=run.sh)
+
+(or)
+
 * [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to [OCI Console](https://cloud.oracle.com/) and click  <img src="./images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
 * Wait for Code Editor to load
 
