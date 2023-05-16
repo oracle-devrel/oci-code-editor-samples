@@ -7,7 +7,7 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 
 ## Getting Started
 
-[<img src="https://raw.githubusercontent.com/hyddel/db-appdev-vm/master/ccl-ce-mac-resize.png" />](https://cloud.oracle.com/?region=us-ashburn-1&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_branch=pre-prod&cs_initscript_path=run.sh)
+[<img src="https://raw.githubusercontent.com/hyddel/db-appdev-vm/master/ccl-ce-mac-resize.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_branch=pre-prod&cs_initscript_path=run.sh)
 
 (or)
 
