@@ -1,7 +1,7 @@
 echo "Welcome to OCI Code Editor Samples"
 
 while true; do
-    read -p "Do you wish to proceed? " yn
+    read -p "Do you wish to proceed? (yes/no) " yn
     case $yn in
         [Yy]* ) echo "Yes, Done"; break;;
         [Nn]* ) echo "Skipped"; exit;;
