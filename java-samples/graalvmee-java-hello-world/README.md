@@ -16,6 +16,16 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 
 Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
+## Quick Launch
+
+If you have your OCI tenancy and want to try out this sample, click on 'Open in Code Editor' button below.
+
+[<img src="../../images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_branch=pre-prod&cs_initscript_path=./java-samples/graalvmee-java-hello-world/run-on-cloud-shell.sh)
+
+This button automates upto Step 3. run Step 4 manually.
+
+If you like to do it fully manually, start from Step 1 below.
+
 ## Step 1: Open Terminal in Code Editor
 
 1. [Login to OCI Console and launch Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true).
@@ -152,9 +162,9 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     Hello World!
     ```
 
-4. Let's use GraalVM Native Image to produce a native executable.
+## Step 4: Using GraalVM Native Image
 
-    4.1) **Option 1: Quick Build enabled**
+1. **Option 1: Quick Build enabled**
 
     To enable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and uncomment the line shown:
 
@@ -224,7 +234,7 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
     ...
     ```
 
-    4.2) **Option 2: Quick Build disabled** 
+2.  **Option 2: Quick Build disabled** 
     
     To disable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and comment the line shown:  
 
