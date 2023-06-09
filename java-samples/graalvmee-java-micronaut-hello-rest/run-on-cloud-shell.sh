@@ -13,7 +13,7 @@ echo ""
 echo "Successfully completed"
 
 sleep 2
-pid=`ps -ef | grep MnHello | grep java | cut -f3 -d' '`
+pid=`ps -ef | grep MnHello | grep java | awk '{ print $2 }'`
 kill -9 $pid
 
 echo "Thanks for trying out this sample"
