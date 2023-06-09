@@ -13,6 +13,7 @@ echo ""
 echo "Successfully completed"
 
 sleep 2
+pid=`ps -ef | grep MnHello | grep java | cut -f3 -d' '`
+kill -9 $pid
 
-echo "Note: Still the service is running, press Ctrl+C to kill the process"
 echo "Thanks for trying out this sample"
