@@ -28,9 +28,9 @@ If you have your OCI tenancy and want to try out this sample, click on 'Open in 
 
 [<img src="../../images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_branch=pre-prod&cs_initscript_path=./java-samples/graalvmee-java-micronaut-hello-rest/run-on-cloud-shell.sh)
 
-This button automates upto Step 3 on your OCI cloud shell and opens the code in OCI code editor to continue with Step 4 manually.
+This button automates upto Step 3 on your OCI Cloud Shell and opens the code in OCI Code Editor to continue with Step 4 manually.
 
-If you like to do it fully manually, start from Step 1 below.
+If you like to do it fully manually yourself, start from Step 1 below.
 
 ## Step 1: Open Terminal in Code Editor
 

@@ -2,6 +2,9 @@ cd ~/${OCI_CCL_DESTINATION_DIR}/java-samples/graalvmee-java-micronaut-hello-rest
 mvn clean package
 java -jar target/MnHelloRest-0.1.jar &
 
+echo "Waiting for 30 seconds for app to start"
+sleep 30
+
 echo "App is running in background"
 echo "Making curl to invoke endpoints"
 curl http://localhost:8080/Micronaut
