@@ -83,6 +83,8 @@
                 <buildArg>--verbose</buildArg>
                 <!-- For Quick Build (22.1+) -->
 								<buildArg>-Ob</buildArg>
+                <!-- To generate the Native Image build output JSON (22.3+) -->
+                <buildArg>-H:BuildOutputJSONFile=build.json</buildArg>
               </buildArgs>
             </configuration>
           </plugin>
