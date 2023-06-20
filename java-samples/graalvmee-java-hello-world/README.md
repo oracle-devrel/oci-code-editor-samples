@@ -20,7 +20,7 @@ Code Editor's direct integration with Cloud Shell allows you access to the Graal
 
 If you have your OCI tenancy and want to try out this sample, click on 'Open in Code Editor' button below.
 
-[<img src="../../images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_branch=pre-prod&cs_initscript_path=./java-samples/graalvmee-java-hello-world/run-on-cloud-shell.sh)
+[<img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_initscript_path=./java-samples/graalvmee-java-hello-world/run-on-cloud-shell.sh)
 
 This button automates upto Step 3 on your OCI Cloud Shell and opens the code in OCI Code Editor to continue with Step 4 manually.
 

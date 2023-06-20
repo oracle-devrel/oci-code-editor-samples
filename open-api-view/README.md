@@ -11,7 +11,7 @@ OpenAPI specification file (earlier called as Swagger spec) is now viewable with
 
 If you have your OCI tenancy and want to try out this sample, click on 'Open in Code Editor' button below.
 
-[<img src="../images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=open-api-view/api-with-examples.yml&cs_branch=pre-prod)
+[<img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=open-api-view/api-with-examples.yml)
 
 This button automates upto Step 2 on your OCI Cloud Shell and opens yaml file in OCI Code Editor to continue with Step 3 manually.
 
