@@ -22,6 +22,16 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 
 Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
+## Quick Launch
+
+If you have your OCI tenancy and want to try out this sample, click on 'Open in Code Editor' button below.
+
+[<img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_initscript_path=./java-samples/graalvmee-java-micronaut-hello-rest/run-on-cloud-shell.sh)
+
+This button automates upto Step 3 on your OCI Cloud Shell and opens the code in OCI Code Editor to continue with Step 4 manually.
+
+If you like to do it fully manually yourself, start from Step 1 below.
+
 ## Step 1: Open Terminal in Code Editor
 
 1. [Login to OCI Console and launch Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true).
@@ -127,20 +137,22 @@ This step is optional - [Check software version and environment variables](./REA
 
 6. Once the app is running in the foreground, press CTRL+C to stop it.
 
-7. Build the app native executable
+## Step 4: Building Native App
+
+1. Build the app native executable
 
     ```shell
     mvn package -Dpackaging=native-image
     
     ```
 
-8. Run the app native executable in the background
+2. Run the app native executable in the background
 
     ```shell
     ./target/MnHelloRest &
     ```
 
-9. Test the app native executable
+3. Test the app native executable
 
     9.1) Should output "Hello World"
 
@@ -154,13 +166,13 @@ This step is optional - [Check software version and environment variables](./REA
     curl http://localhost:8080/Micronaut-Graal-Native
     ```
 
-10. Bring the running app JAR in the foreground
+4. Bring the running app JAR in the foreground
 
     ```shell
     fg
     ```
 
-11. Once the app is running in the foreground, press CTRL+C to stop it.
+5. Once the app is running in the foreground, press CTRL+C to stop it.
 
 ## References
 * [GraalVM Enterprise Overview](https://www.oracle.com/in/java/graalvm/)

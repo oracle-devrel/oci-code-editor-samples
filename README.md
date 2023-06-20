@@ -6,6 +6,11 @@
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks.
 
 ## Getting Started
+
+[<img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md)
+
+(or)
+
 * [Click here to open Code Editor](https://cloud.oracle.com/?bdcstate=maximized&codeeditor=true) directly or login to [OCI Console](https://cloud.oracle.com/) and click  <img src="./images/oci-ce-icon.png" width="16" height="16" /> from top right corner.
 * Wait for Code Editor to load
 
@@ -18,8 +23,8 @@ The Code Editor enables you to edit and deploy code for various OCI services dir
 * [Java - GraalVM Micronaut Hello Rest with OCI Code Editor](./java-samples/graalvmee-java-micronaut-hello-rest/)
 
 ## References
-* [Blog Post - link to be updated]
-* [Documentation - link to be updated]
+* [Documentation](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/code_editor_intro.htm)
+* [Oracle Code Editor Blog](https://blogs.oracle.com/cloud-infrastructure/post/introducing-the-oci-code-editor)
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
