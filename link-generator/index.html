@@ -6,49 +6,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
   <title>Generate Open in Code Editor Button</title>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body>
-
-    <div id="sticky-banner" tabindex="-1" class="fixed top-0 left-0 z-50 flex justify-between w-full p-4 border-b border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-        <div class="flex items-center mx-auto">
-            <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                <span class="inline-flex p-1 mr-3 bg-gray-100 rounded-full dark:bg-gray-600">
-                    <img height="48px" width="48px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Oracle_Corporation_logo.svg/2560px-Oracle_Corporation_logo.svg.png" />
-                    <span class="sr-only">Light bulb</span>
-                </span>
-                <div class="mb-4 md:mb-0 md:mr-4">
-                    <h2 class="mb-1 text-base font-semibold text-gray-900 dark:text-white">Open in Code Editor Link Generator</h2>
-                    <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Experiment with parameters needed to open Git repository in OCI Code Editor and generate final link.</p>
-                </div>
-            </p>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Oracle_Corporation_logo.svg/2560px-Oracle_Corporation_logo.svg.png" class="h-8 mr-3" alt="Oracle" />
+              <div class="mb-4 md:mb-0 md:mr-4">
+                <h2 class="mb-1 text-base font-semibold text-gray-900 dark:text-white">Open in Code Editor Link Generator</h2>
+                <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Experiment with parameters needed to open Git repository in OCI Code Editor and generate final link.</p>
+            </div>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/code_editor_using_using_git_from_code_editor_one_click_clone.htm" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Documentation</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-
+    </nav>
 
     <section class="bg-white dark:bg-gray-900 ">
         
-        <div class="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
+        <div class="container min-h-screen px-6 py-12 mx-auto lg:flex lg:gap-12">
             <div class="wf-ull lg:w-1/2">
     
-                <div class="mt-10 space-y-6">
+                <div class="space-y-6">
     
                     <div>
-                        <label for="github-repo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GitHub URL <span class="text-rose-600">*</span></label>
-                        <input type="text" id="github-repo" aria-describedby="github-repo-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="https://github.com/oracle-devrel/oci-code-editor-samples" required>
+                        <label for="github-repo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repository URL <span class="text-rose-600">*</span></label>
+                        <input type="text" id="github-repo" aria-describedby="github-repo-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="https://github.com/oracle-devrel/oci-code-editor-samples.git" placeholder="https://github.com/oracle-devrel/oci-code-editor-samples.git" required>
                         <p id="github-repo-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">GitHub repository URL which you like to clone on OCI Cloud Shell/Code Editor.</p>
+                        <p id="github-repo-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Ex: https://github.com/oracle-devrel/oci-code-editor-samples.git</p>
                     </div>
+                    <hr />
                     <div class="flex items-center mb-4">
                         <input id="open-editor" type="checkbox" checked class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="open-editor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Open OCI Code Editor</label>
@@ -56,12 +55,12 @@
                     <div>
                         <label for="git-branch" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repository Branch <small>(Optional)</small></label>
                         <input type="text" id="git-branch" aria-describedby="git-branch-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
-                        <p id="git-branch-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Leaving empty will clone default branch from repository.</p>
+                        <p id="git-branch-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Leaving empty will clone default branch from repository. (Ex: master)</p>
                     </div>
                     <div>
                         <label for="init-script-path" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Init Script Path <small>(Optional)</small></label>
                         <input type="text" id="init-script-path" aria-describedby="init-script-path-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
-                        <p id="init-script-path-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Path to an executable script executed after cloning. The file path is relative to the current directory. Leave blank to skip.</p>
+                        <p id="init-script-path-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Path to an executable script executed after cloning. The file path is relative to the current directory. Leave blank to skip. (Ex: run.sh)</p>
                     </div>
                     <div>
                         <label for="open-file" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">File path to open <small>(Optional)</small></label>
@@ -73,9 +72,9 @@
             </div>
     
             <div class="relative w-full mt-8 lg:w-1/2 lg:mt-0">
-                <span>Preview</span>
-                <div id="preview" class="flex items-center justify-center" style="background-color: white; height: 200px; border: 1px solid grey; border-radius: 5px;">
-                    <img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" alt="">
+                <div class="text-sm font-medium">Preview</div>
+                <div id="preview" class="flex items-center justify-center" style="background-color: white; height: 200px; border: 1px solid grey; border-radius: 5px; border-style: dotted">
+                    <a href="https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true" target="_blank"><img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" alt=""></a>
                 </div>
 
                 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
@@ -93,7 +92,7 @@
                         style="width: 100%; white-space : wrap !important;"
                         class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
                         <div id="markdown-value">
-                            composer require
+                            [![Open in Code Editor](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true)
                         </div>
 <!--                     
                         <svg class="shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +107,7 @@
                         style="width: 100%; white-space : wrap !important;"
                         class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
                         <div id="html-value">
-                            composer require
+                            &lt;a href="https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true"&gt;&lt;img alt="Open in Code Editor" src="https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg"&gt;&lt;/a&gt;
                         </div>
 <!--                     
                         <svg class="shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +167,7 @@
                 
                 var markdown = "[![Open in Code Editor](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](" + url + ")";
 
-                var html = "<a href=\"" + url + "\"><img alt=\"Open in Code Editor\" src=\"https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg\"></a>"
+                var html = "<a href=\"" + url + "\" target=\"_blank\"><img alt=\"Open in Code Editor\" src=\"https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg\"></a>"
 
                 console.log(markdown);
                 this.markdownValue = markdown;
