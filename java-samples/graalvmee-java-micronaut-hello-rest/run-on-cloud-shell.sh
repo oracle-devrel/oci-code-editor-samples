@@ -1,3 +1,4 @@
+csruntimectl java set graalvmeejdk-17
 cd ~/${OCI_CCL_DESTINATION_DIR}/java-samples/graalvmee-java-micronaut-hello-rest
 mvn clean package
 nohup java -jar target/MnHelloRest-0.1.jar &
