@@ -28,7 +28,7 @@ If you have your OCI tenancy and want to try out this sample, click on 'Open in 
 
 [<img src="https://raw.githubusercontent.com/oracle-devrel/oci-code-editor-samples/main/images/open-in-code-editor.png" />](https://cloud.oracle.com/?region=home&cs_repo_url=https://github.com/oracle-devrel/oci-code-editor-samples.git&cs_open_ce=true&cs_readme_path=README.md&cs_initscript_path=./java-samples/graalvmee-java-micronaut-hello-rest/run-on-cloud-shell.sh)
 
-This button automates upto Step 3 on your OCI Cloud Shell and opens the code in OCI Code Editor to continue with Step 4 manually.
+This button automates upto Step 4 on your OCI Cloud Shell and opens the code in OCI Code Editor to continue with Step 5 manually.
 
 If you like to do it fully manually yourself, start from Step 1 below.
 
@@ -137,7 +137,7 @@ This step is optional - [Check software version and environment variables](./REA
 
 6. Once the app is running in the foreground, press CTRL+C to stop it.
 
-## Step 4: Building Native App
+## Step 5: Building Native App
 
 1. Build the app native executable
 
@@ -182,13 +182,13 @@ This step is optional - [Check software version and environment variables](./REA
 ## Contributors
 * Author: Sachin Pikle
 * Collaborators: Ashok Raja CM
-* Last updated: November 2022
+* Last updated: June 2023
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
 
 ## License
-Copyright (c) 2022 Oracle and/or its affiliates.
+Copyright (c) 2023 Oracle and/or its affiliates.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
 
