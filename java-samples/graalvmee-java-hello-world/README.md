@@ -1,20 +1,20 @@
-# Java Hello World with GraalVM Enterprise in OCI Code Editor
+# Java Hello World with Oracle GraalVM in OCI Code Editor
 
-This sample shows how you can get started quickly with GraalVM Enterprise Edition in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world Java application built with GraalVM Enterprise Native Image and JDK (Java Development Kit).
+This sample shows how you can get started quickly with Oracle GraalVM in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world Java application built with Oracle GraalVM Native Image and JDK (Java Development Kit).
 
 ## What is GraalVM?
 
-GraalVM is a high-performance JDK distribution that can accelerate any Java workload running on the HotSpot JVM.
+GraalVM is a high performance JDK distribution that can accelerate any Java workload running on the HotSpot JVM.
 
 GraalVM Native Image ahead-of-time compilation enables you to build lightweight Java applications that are smaller, faster, and use less memory and CPU. At build time, GraalVM Native Image analyzes a Java application and its dependencies to identify just what classes, methods, and fields are absolutely necessary and generates optimized machine code for just those elements.
 
-GraalVM Enterprise Edition is available for use on Oracle Cloud Infrastructure (OCI) at no additional cost.
+Oracle GraalVM is available for use on Oracle Cloud Infrastructure (OCI) at no additional cost.
 
 ## What is Code Editor?
 
 The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks. 
 
-Code Editor's direct integration with Cloud Shell allows you access to the GraalVM Enterprise Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
+Code Editor's direct integration with Cloud Shell allows you access to the Oracle GraalVM Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
 ## Quick Launch
 
@@ -157,8 +157,8 @@ This step is optional - [Check software version and environment variables](./REA
     ```
 
 ## References
-* [GraalVM Enterprise Overview](https://www.oracle.com/in/java/graalvm/)
-* [Graal VM Enterprise Documentation](https://docs.oracle.com/en/graalvm/enterprise/22/index.html)
+* [Oracle GraalVM Overview](https://www.oracle.com/in/java/graalvm/)
+* [Oracle GraalVM Documentation](https://docs.oracle.com/en/graalvm/index.html)
 
 ## Contributors
 * Author: Sachin Pikle
