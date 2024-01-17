@@ -1,6 +1,6 @@
 # Java Hello World with Oracle GraalVM in OCI Code Editor
 
-This sample shows how you can get started quickly with Oracle GraalVM in Oracle Cloud Infrastructre (OCI) Code Editor. This sample uses a simple hello world Java application built with Oracle GraalVM Native Image and JDK (Java Development Kit).
+This sample shows how you can get started quickly with Oracle GraalVM in Oracle Cloud Infrastructure (OCI) Code Editor. This sample uses a simple hello world Java application built with Oracle GraalVM Native Image and JDK (Java Development Kit).
 
 ## What is GraalVM?
 
@@ -12,7 +12,7 @@ Oracle GraalVM is available for use on Oracle Cloud Infrastructure (OCI) at no a
 
 ## What is Code Editor?
 
-The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks. 
+The Code Editor enables you to edit and deploy code for various OCI services directly from the OCI Console. You can now update service workflows and scripts without having to switch between the Console and your local development environments. This makes it easy to rapidly prototype cloud solutions, explore new services, and accomplish quick coding tasks.
 
 Code Editor's direct integration with Cloud Shell allows you access to the Oracle GraalVM Native Image and JDK 17 (Java Development Kit) pre-installed in Cloud Shell.
 
@@ -34,7 +34,7 @@ If you like to do it fully manually yourself, start from Step 1 below.
 ![](./images/oci-ce-terminal.png)
 
 
-## Step 2: Select GraalVM as the current JDK 
+## Step 2: Select GraalVM as the current JDK
 
 1. List the installed JDKs:
 
@@ -45,21 +45,21 @@ If you like to do it fully manually yourself, start from Step 1 below.
     The output should be similar to:
 
     ```shell
-      graalvmeejdk-17                                               /usr/lib64/graalvm/graalvm22-ee-java17
-    * oraclejdk-1.8                                                           /usr/java/jdk1.8.0_351-amd64
-      oraclejdk-11                                                                   /usr/java/jdk-11.0.17
+      graalvmjdk-17                                                      /usr/lib64/graalvm/graalvm-java17
+    * oraclejdk-11                                                                   /usr/java/jdk-11.0.17
+      oraclejdk-1.8                                                        /usr/lib/jvm/jdk-1.8-oracle-x64
     ```
 
 2. Select GraalVM as the current JDK:
 
     ```shell
-    csruntimectl java set graalvmeejdk-17
+    csruntimectl java set graalvmjdk-17
     ```
 
     The output should be similar to:
 
     ```shell
-    The current managed java version is set to graalvmeejdk-17.
+    The current managed java version is set to graalvmjdk-17.
     ```
 
 ## Step 3: [OPTIONAL] Confirm Software Version and Environment Variables
@@ -73,19 +73,19 @@ This step is optional - [Check software version and environment variables](./REA
 
     ```shell
     git init graalvmee-java-hello-world
-    
+
     cd graalvmee-java-hello-world
-    
+
     git remote add origin https://github.com/oracle-devrel/oci-code-editor-samples.git
-    
+
     git config core.sparsecheckout true
-    
+
     echo "java-samples/graalvmee-java-hello-world/*">>.git/info/sparse-checkout
-    
+
     git pull --depth=1 origin main
-    
+
     cd java-samples/graalvmee-java-hello-world/
-    
+
     ```
 
     You can now view/change the sample code in code editor.
@@ -115,8 +115,8 @@ This step is optional - [Check software version and environment variables](./REA
 
     4.1) To enable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and uncomment the line shown:
 
-    ```
-    <buildArg>-Ob</buildArg>
+    ```xml
+    <quickBuild>true</quickBuild>
     ```
 
     4.2) Run the Native Image build to generate a native executable:
@@ -130,13 +130,13 @@ This step is optional - [Check software version and environment variables](./REA
     ```shell
     ./target/my-app
     ```
-    
-2. **Option 2: Quick Build disabled** Let's use GraalVM Native Image to produce a native executable without the `Quick Build` option.
-    
-    5.1) To disable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and comment the line shown:  
 
-    ```
-    <!-- <buildArg>-Ob</buildArg> -->
+2. **Option 2: Quick Build disabled** Let's use GraalVM Native Image to produce a native executable without the `Quick Build` option.
+
+    5.1) To disable `Quick Build`, open [pom.xml](pom.xml) in the Code Editor and comment the line shown:
+
+    ```xml
+    <!-- <quickBuild>true</quickBuild> -->
     ```
 
     5.2) Run the Native Image build to generate a native executable:
@@ -152,27 +152,32 @@ This step is optional - [Check software version and environment variables](./REA
     ```
 
     The output should be similar to:
-    ```
+
+    ```text
     Hello World!
     ```
 
 ## References
+
 * [Oracle GraalVM Overview](https://www.oracle.com/in/java/graalvm/)
 * [Oracle GraalVM Documentation](https://docs.oracle.com/en/graalvm/index.html)
 
 ## Contributors
+
 * Author: Sachin Pikle
 * Collaborators: Ashok Raja CM
-* Last updated: June 2023
+* Last updated: January 2024
 
 ## Contributing
+
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
 
 ## License
-Copyright (c) 2023 Oracle and/or its affiliates.
+
+Copyright (c) 2024 Oracle and/or its affiliates.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
 
 See [LICENSE](../LICENSE) for more details.
 
-ORACLE AND ITS AFFILIATES DO NOT PROVIDE ANY WARRANTY WHATSOEVER, EXPRESS OR IMPLIED, FOR ANY SOFTWARE, MATERIAL OR CONTENT OF ANY KIND CONTAINED OR PRODUCED WITHIN THIS REPOSITORY, AND IN PARTICULAR SPECIFICALLY DISCLAIM ANY AND ALL IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.  FURTHERMORE, ORACLE AND ITS AFFILIATES DO NOT REPRESENT THAT ANY CUSTOMARY SECURITY REVIEW HAS BEEN PERFORMED WITH RESPECT TO ANY SOFTWARE, MATERIAL OR CONTENT CONTAINED OR PRODUCED WITHIN THIS REPOSITORY. IN ADDITION, AND WITHOUT LIMITING THE FOREGOING, THIRD PARTIES MAY HAVE POSTED SOFTWARE, MATERIAL OR CONTENT TO THIS REPOSITORY WITHOUT ANY REVIEW. USE AT YOUR OWN RISK. 
+ORACLE AND ITS AFFILIATES DO NOT PROVIDE ANY WARRANTY WHATSOEVER, EXPRESS OR IMPLIED, FOR ANY SOFTWARE, MATERIAL OR CONTENT OF ANY KIND CONTAINED OR PRODUCED WITHIN THIS REPOSITORY, AND IN PARTICULAR SPECIFICALLY DISCLAIM ANY AND ALL IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.  FURTHERMORE, ORACLE AND ITS AFFILIATES DO NOT REPRESENT THAT ANY CUSTOMARY SECURITY REVIEW HAS BEEN PERFORMED WITH RESPECT TO ANY SOFTWARE, MATERIAL OR CONTENT CONTAINED OR PRODUCED WITHIN THIS REPOSITORY. IN ADDITION, AND WITHOUT LIMITING THE FOREGOING, THIRD PARTIES MAY HAVE POSTED SOFTWARE, MATERIAL OR CONTENT TO THIS REPOSITORY WITHOUT ANY REVIEW. USE AT YOUR OWN RISK.

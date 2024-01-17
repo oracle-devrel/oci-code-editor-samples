@@ -1,4 +1,4 @@
-csruntimectl java set graalvmeejdk-17
+csruntimectl java set graalvmjdk-17
 cd ~/${OCI_CCL_DESTINATION_DIR}/java-samples/graalvmee-java-hello-world
 mvn clean package
 java -jar target/my-app-1.0-SNAPSHOT.jar
